@@ -33,8 +33,8 @@ Desktop version view
 
 ### Links
 
-- Solution URL: [](https://github.com/NarminZakizade/fem-product-preview-card-component)
-- Live Site URL: [](http://narminzakizade.me/fem-product-preview-card-component/
+- [Solution URL](https://github.com/NarminZakizade/fem-product-preview-card-component)
+- [Live Site URL](http://narminzakizade.me/fem-product-preview-card-component/)
 
 ## My process
 
