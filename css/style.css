@@ -1,0 +1,193 @@
+:root{
+    /* colors */
+    --clr-primary-300:hsl(30, 38%, 92%);
+    --clr-primary-700:hsl(158, 36%, 37%);
+
+    --clr-neutral-100:hsl(0, 0%, 100%);
+    --clr-neutral-600:hsl(228, 12%, 48%);
+    --clr-neutral-800: hsl(212, 21%, 14%);
+
+    --fs-primary:14px;
+
+    --ff-sans:'Montserrat', sans-serif;
+    --ff-serif:'Fraunces', serif;
+
+    --fw-500:500;
+    --fw-700:700;
+}
+
+/* -----CSS Reset----- */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body{
+    font-size: var(--fs-primary);
+    font-family: var(--ff-sans);
+    background-color: var(--clr-primary-300);
+    color:var(--clr-neutral-600);
+    line-height: 1.8;
+}
+h1{
+  line-height: 1;
+  padding: 0.25em 0 0.4em 0;
+  color:var(--clr-neutral-800);
+  font-size: 2.2em;
+}
+
+.card{
+  border-radius: 1em;
+  overflow: hidden;
+  margin: 1.5em 1em;
+  display:flex;
+  flex-direction: column;
+}
+.card__info{
+  background-color: var(--clr-neutral-100);
+  padding: 1.6em;
+}
+.item{
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+}
+.item__name{
+    font-family: var(--ff-serif);
+    font-weight: var(--fw-700);
+}
+.item__description{
+  padding-bottom: 1.5em;
+  font-size: 0.95em;
+}
+.prices{
+  display:flex;
+}
+.prices>*{
+  display:inline;
+  padding: 0.2em 0;
+}
+.price--new{
+  font-family: var(--ff-serif);
+  font-weight: var(--fw-700);
+  color:var(--clr-primary-700);
+  font-size: 2em;
+  padding-right: 1em;
+}
+.price--old{
+  text-decoration: line-through;
+  font-size: 0.95em;
+  align-self: center;
+}
+.cart{
+  border-style: none;
+  border-radius: 0.5em;
+  background-color: var(--clr-primary-700);
+  color:var(--clr-neutral-100);
+  width:100%;
+  margin:0 auto;
+  display:block;
+  padding:1em 0;
+}
+.cart:hover{
+background-color:hsl(158, 36%, 17%) ;
+}
+.cart__icon{
+  display:inline;
+  vertical-align: middle;
+  padding-right: 0.5em;
+}
+image{
+  max-width: 100%;
+}
+/* -----styling for desktop view----- */
+@media (min-width:35rem){
+  main{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+  }
+  .card__image{
+    content: url(/images/image-product-desktop.jpg);
+  }
+  .card{
+    height: 390px;
+    width: 520px;
+    flex-direction: row;  
+  }
+  .card>*{
+    width: 50%;
+  }
+  .cart{
+    padding:0.5em;
+  }
+}
