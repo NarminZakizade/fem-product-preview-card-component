@@ -177,7 +177,7 @@ image{
     justify-content: center;
   }
   .card__image{
-    content: url(/images/image-product-desktop.jpg);
+    content: url(images/image-product-desktop.jpg);
   }
   .card{
     height: 390px;
